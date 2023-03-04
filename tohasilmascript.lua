@@ -1,3 +1,5 @@
+whilw
+
 local A_1 = "..." local A_2 = "All" 
 
 
@@ -14,20 +16,20 @@ game.Players.LocalPlayer.PlayerGui.heightMeter.HeightMeter.Visible = false
 
 local hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
 
-
+while wait(10) do
 while hummy.Parent.Parent ~= nil do
 
 
-	while wait(10) do
+	wait()
 
 
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[kullanici].Character.HumanoidRootPart.CFrame
 
 
-	end
 	game.Workspace.Camera:Destroy()
 
 
+end
 end
 
 local vu = game:GetService("VirtualUser")
