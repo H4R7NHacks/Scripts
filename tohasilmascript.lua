@@ -1,5 +1,3 @@
-whilw
-
 local A_1 = "..." local A_2 = "All" 
 
 
