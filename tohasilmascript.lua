@@ -18,12 +18,13 @@ local hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
 while hummy.Parent.Parent ~= nil do
 
 
-	wait()
+	while wait(10) do
 
 
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[kullanici].Character.HumanoidRootPart.CFrame
 
 
+	end
 	game.Workspace.Camera:Destroy()
 
 
