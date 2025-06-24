@@ -1,10 +1,6 @@
 if game.PlaceId == 15144787112 then
 
 
-
-	local vim = game:GetService("VirtualInputManager")
-	local cooldown = false
-
 	if game.Players.LocalPlayer.Name == "Slow_pq" or game.Players.LocalPlayer.Name == "Rising_An4el" then
 		while wait(0.1) do
 			
@@ -15,15 +11,7 @@ if game.PlaceId == 15144787112 then
 			for i,v in pairs (ball) do
 				if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("BasePart") then
                     			if game.Workspace.Alive:FindFirstChild(game.Players.LocalPlayer.Name) then
-						if cooldown == false then
-							cooldown = true
-							wait(1)
-							vim:SendKeyEvent(true, Enum.KeyCode.Q, false, game)
-							wait(0.05)
-							vim:SendKeyEvent(false, Enum.KeyCode.Q, false, game)
-							wait(2)
-							cooldown = false
-						end
+						game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game:GetService("Players"):WaitForChild("anadolu_96").Character)
             	   	 		end
 				end
 			end
