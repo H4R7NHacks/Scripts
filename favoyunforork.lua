@@ -54,6 +54,7 @@ elseif game.PlaceId == 13772394625 then
 						wait(0.5)
 						game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game:GetService("Players"):WaitForChild("anadolu_96").Character)
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(10, 5, 10)
+						wait(5)
             	   	 		end
 				end
 			end
