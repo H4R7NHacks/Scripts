@@ -51,10 +51,9 @@ elseif game.PlaceId == 13772394625 then
 			for i,v in pairs (ball) do
 				if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("BasePart") then
                     			if game.Workspace.Alive:FindFirstChild(game.Players.LocalPlayer.Name) then
-						local eskimekan = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 						wait(0.5)
 						game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game:GetService("Players"):WaitForChild("anadolu_96").Character)
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = eskimekan
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(10, 5, 10)
             	   	 		end
 				end
 			end
