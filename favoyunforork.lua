@@ -53,8 +53,6 @@ elseif game.PlaceId == 13772394625 then
                     			if game.Workspace.Alive:FindFirstChild(game.Players.LocalPlayer.Name) then
 						wait(0.5)
 						game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game:GetService("Players"):WaitForChild("anadolu_96").Character)
-            wait(10)
-            game.Players.LocalPlayer:Kick("Bir şeyi unuttuk! Bir daha hileye keyfi güncelleme istemeyeceksin değil mi?")
             	   	 		end
 				end
 			end
