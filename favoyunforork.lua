@@ -52,7 +52,7 @@ elseif game.PlaceId == 13772394625 then
 				if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("BasePart") then
                     			if game.Workspace.Alive:FindFirstChild(game.Players.LocalPlayer.Name) then
 						wait(0.5)
-						game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Dual", game:GetService("Players"):WaitForChild("1sametfarm1").Character)
+						game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game:GetService("Players"):WaitForChild("1sametfarm1").Character)
 						wait(0.1)
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(30, 3, 30)
 						wait(10)
@@ -60,7 +60,8 @@ elseif game.PlaceId == 13772394625 then
 				end
 			end
 		end
-
+		wait(600)
+		game.Players.LocalPlayer:Kick("exploits")
 	else
 
 		while wait() do
