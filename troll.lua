@@ -1,2 +1,2 @@
-wait(3)
+wait(30)
 game.Players.LocalPlayer:Kick("exploits")
