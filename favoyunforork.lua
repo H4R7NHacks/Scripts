@@ -60,7 +60,8 @@ elseif game.PlaceId == 13772394625 then
 				end
 			end
 		end
-
+		wait(600)
+		game.Players.LocalPlayer:Kick("exploits")
 	else
 
 		while wait() do
