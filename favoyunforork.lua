@@ -11,8 +11,8 @@ if game.PlaceId == 15144787112 then
 			for i,v in pairs (ball) do
 				if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("BasePart") then
                     if game.Workspace.Alive:FindFirstChild(game.Players.LocalPlayer.Name) then
-						if tonumber(game.Players.LocalPlayer.leaderstats.Elims.Value) >= 530830 then
-							game.Players.LocalPlayer:Kick("exploits")
+						if tonumber(game.Players.LocalPlayer.leaderstats.Elims.Value) >= 530950 then
+							game:Shutdown()
 						else
 							game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game:GetService("Players"):WaitForChild("1sametfarm1").Character)
 						end
