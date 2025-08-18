@@ -93,7 +93,7 @@ local function sendkillamount(msg)
 end
 
 
-if game.PlaceId == 13772394625 and game.Players.LocalPlayer.UserId == 3076333652 then
+if game.PlaceId == 13772394625 and game.Players.LocalPlayer.UserId == 8493490949 then
 
 	
 	sendwelcomeforkill(":ballot_box_with_check: Private Server'da kill farmı başlatılmıştır, kolay gelsin!")
@@ -114,7 +114,7 @@ if game.PlaceId == 13772394625 and game.Players.LocalPlayer.UserId == 3076333652
 	end
 
 
-elseif game.PlaceId == 15144787112 and game.Players.LocalPlayer.UserId == 3076333652 then
+elseif game.PlaceId == 15144787112 and game.Players.LocalPlayer.UserId == 8493490949 then
 
 	
 	sendwelcomeforduel(":ballot_box_with_check: Duel'de farm başlatılmıştır, kolay gelsin!")
