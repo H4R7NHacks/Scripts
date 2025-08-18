@@ -16,13 +16,13 @@ local function send(msg)
 end
 
 
-local function send(msg)
+local function send(msg1)
     	request({
         	Url = killwebhook,
         	Method = "POST",
         	Headers = {["Content-Type"] = "application/json"},
         	Body = HttpService:JSONEncode({
-            	content = "<@"..userId.."> " .. msg
+            	content = "<@"..userId.."> " .. msg1
         	})
     	})
 end
