@@ -78,7 +78,7 @@ if game.PlaceId == 13772394625 and game.Players.LocalPlayer.UserId == 8493256621
 	while task.wait(60) do
     	local count = #Players:GetPlayers()
     	if count >= 3 then
-        	sendforkillnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda "..count.." oyuncu kaldı ve mevcut Kill sayınız : "..game.Players.LocalPlayer.leaderstats.Elims.Value.." !")
+        	sendforkillnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu kaldı ve mevcut Kill sayınız : "..game.Players.LocalPlayer.leaderstats.Elims.Value.." !")
 		else
 			sendforkillcrash(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda "..count.." oyuncu kaldı ve mevcut Kill sayınız : "..game.Players.LocalPlayer.leaderstats.Elims.Value.." !")
     	end
