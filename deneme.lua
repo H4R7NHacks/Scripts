@@ -1,12 +1,11 @@
 local Players = game:GetService("Players")
 local HttpService = game:GetService("HttpService")
 local userId = "750724417931313171"
-local duelwebhook = "https://discord.com/api/webhooks/1406789282760233071/tvPPkgEbDBL8St-T9X9bfJo4iG_jkBkPfZThp75qimk6YzVxA55TyRanPRRlRnWl_j8h"
-local killwebhook = "https://discord.com/api/webhooks/1406797634605285426/9igbro2jUHGS3-c7hbSDCGNHDjvuB4t6hGa28OC0LydDqVLAdX_XVDaxzdCWAbPp4TCr"
+local denemewebhook = "https://discord.com/api/webhooks/1406797634605285426/9igbro2jUHGS3-c7hbSDCGNHDjvuB4t6hGa28OC0LydDqVLAdX_XVDaxzdCWAbPp4TCr"
 
 local function send(msg)
     	request({
-        	Url = duelwebhook,
+        	Url = denemewebhook,
         	Method = "POST",
         	Headers = {["Content-Type"] = "application/json"},
         	Body = HttpService:JSONEncode({
