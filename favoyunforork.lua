@@ -95,39 +95,42 @@ end
 
 if game.PlaceId == 15144787112 and game.Players.LocalPlayer.UserId == 3076333652 then
 
-	while wait(0.1) do
+	task.spawn(function()
+		while wait(0.1) do
 			
-		game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_net@0.1.0").net:FindFirstChild("RE/PlayerWantsRematch"):FireServer()
+			game:GetService("ReplicatedStorage").Packages._Index:FindFirstChild("sleitnick_net@0.1.0").net:FindFirstChild("RE/PlayerWantsRematch"):FireServer()
 
-		local ball = game.Workspace.Balls:GetDescendants()
+			local ball = game.Workspace.Balls:GetDescendants()
 			
-		for i,v in pairs (ball) do
-			if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("BasePart") then
-                if game.Workspace.Alive:FindFirstChild(game.Players.LocalPlayer.Name) then
-					game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game:GetService("Players"):WaitForChild("1sametfarm1").Character)
-            	end
+			for i,v in pairs (ball) do
+				if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("BasePart") then
+                	if game.Workspace.Alive:FindFirstChild(game.Players.LocalPlayer.Name) then
+						game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game:GetService("Players"):WaitForChild("1sametfarm1").Character)
+            		end
+				end
 			end
 		end
-	end
+	end)
 
 
+	task.spawn(function()
+		sendwelcomeforduel(":ballot_box_with_check: Duel'de farm başlatılmıştır, kolay gelsin!")
+		wait(0.1)
+		sendduelamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
 	
-	sendwelcomeforduel(":ballot_box_with_check: Duel'de farm başlatılmıştır, kolay gelsin!")
-	wait(0.1)
-	sendduelamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
-	
-	while task.wait(59.9) do
-    	local count = #Players:GetPlayers()
-    	if count >= 2 then
-        	sendforduelnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu bulunuyor! Eğer 60 saniye sonra mesaj gelmediyse ana hesabınızın oyunda olmadığı anlamına gelir.")
-			wait(0.1)
-			sendduelamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
-		else
-			sendforduelcrash(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu kaldı! Eğer 60 saniye sonra mesaj gelmediyse ana hesabınızın oyunda olmadığı anlamına gelir.")
-			wait(0.1)
-			sendduelamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
-    	end
-	end
+		while task.wait(59.9) do
+    		local count = #Players:GetPlayers()
+    		if count >= 2 then
+        		sendforduelnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu bulunuyor! Eğer 60 saniye sonra mesaj gelmediyse ana hesabınızın oyunda olmadığı anlamına gelir.")
+				wait(0.1)
+				sendduelamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
+			else
+				sendforduelcrash(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu kaldı! Eğer 60 saniye sonra mesaj gelmediyse ana hesabınızın oyunda olmadığı anlamına gelir.")
+				wait(0.1)
+				sendduelamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
+    		end
+		end
+	end)
 
 elseif game.PlaceId == 15144787112 then
 	while wait(0.1) do
@@ -138,38 +141,42 @@ elseif game.PlaceId == 13772394625 and game.Players.LocalPlayer.UserId == 307633
 
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/main/Circle"))()
 
-	while wait() do
-		local ball = game.Workspace.Balls:GetDescendants()
+	task.spawn(function()
+		while wait() do
+			local ball = game.Workspace.Balls:GetDescendants()
 	
-		for i,v in pairs (ball) do
-			if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("BasePart") then
-                if game.Workspace.Alive:FindFirstChild(game.Players.LocalPlayer.Name) then
-					wait(0.5)
-					game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game:GetService("Players"):WaitForChild("1sametfarm1").Character)
-					wait(0.1)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(30, 3, 30)
-					wait(10)
-            	end
+			for i,v in pairs (ball) do
+				if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("BasePart") then
+               		if game.Workspace.Alive:FindFirstChild(game.Players.LocalPlayer.Name) then
+						wait(0.5)
+						game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game:GetService("Players"):WaitForChild("1sametfarm1").Character)
+						wait(0.1)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(30, 3, 30)
+						wait(10)
+            		end
+				end
 			end
 		end
-	end
+	end)
 
-	sendwelcomeforkill(":ballot_box_with_check: Private Server'da kill farmı başlatılmıştır, kolay gelsin!")
-	wait(0.1)
-	sendkillamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
+	task.spawn(function()
+		sendwelcomeforkill(":ballot_box_with_check: Private Server'da kill farmı başlatılmıştır, kolay gelsin!")
+		wait(0.1)
+		sendkillamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
 	
-	while task.wait(59.9) do
-    	local count = #Players:GetPlayers()
-    	if count >= 3 then
-        	sendforkillnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu bulunuyor! Eğer 60 saniye sonra mesaj gelmediyse ana hesabınızın oyunda olmadığı anlamına gelir.")
-			wait(0.1)
-			sendkillamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
-		else
-			sendforkillcrash(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu kaldı! Eğer 60 saniye sonra mesaj gelmediyse ana hesabınızın oyunda olmadığı anlamına gelir.")
-			wait(0.1)
-			sendkillamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
-    	end
-	end
+		while task.wait(59.9) do
+    		local count = #Players:GetPlayers()
+    		if count >= 3 then
+        		sendforkillnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu bulunuyor! Eğer 60 saniye sonra mesaj gelmediyse ana hesabınızın oyunda olmadığı anlamına gelir.")
+				wait(0.1)
+				sendkillamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
+			else
+				sendforkillcrash(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu kaldı! Eğer 60 saniye sonra mesaj gelmediyse ana hesabınızın oyunda olmadığı anlamına gelir.")
+				wait(0.1)
+				sendkillamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
+    		end
+		end
+	end)
 
 elseif game.PlaceId == 13772394625 then
 
