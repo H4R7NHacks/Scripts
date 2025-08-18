@@ -4,56 +4,44 @@ local userId = "1300452724953055335"
 local duelwebhook = "https://discord.com/api/webhooks/1406789282760233071/tvPPkgEbDBL8St-T9X9bfJo4iG_jkBkPfZThp75qimk6YzVxA55TyRanPRRlRnWl_j8h"
 local killwebhook = "https://discord.com/api/webhooks/1406789460515094639/zfNnIXOtryiH4XJbg30ttdqlUD2x_wBgtXhgISWIkcEl234-fjagJvd5Ssc9uBh0G9cx"
 
+local function send(msg)
+    	request({
+        	Url = webhook,
+        	Method = "POST",
+        	Headers = {["Content-Type"] = "application/json"},
+        	Body = HttpService:JSONEncode({
+            		content = "<@"..userId.."> " .. msg
+        	})
+    	})
+end
 
 if game.PlaceId == 13772394625 and game.Players.LocalPlayer.UserId == 3076333652 then
-
-
-	local function send(msg)
-    		request({
-        		Url = webhook,
-        		Method = "POST",
-        		Headers = {["Content-Type"] = "application/json"},
-        		Body = HttpService:JSONEncode({
-            			content = "<@"..userId.."> " .. msg
-        		})
-    		})
-	end
 	
+
 	send(":ballot_box_with_check: Private Server'da kill farmı başlatılmıştır, kolay gelsin!")
 	
 	while task.wait(60) do
-    		local count = #Players:GetPlayers()
-    		if count >= 3 then
-        		send(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda "..count.." oyuncu kaldı!")
+    	local count = #Players:GetPlayers()
+    	if count >= 3 then
+        	send(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda "..count.." oyuncu kaldı!")
 		else
 			send(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda "..count.." oyuncu kaldı!")
-    		end
+    	end
 	end
 
 
 elseif game.PlaceId == 15144787112 and game.Players.LocalPlayer.UserId == 3076333652 then
 
-
-	local function send(msg)
-    		request({
-        		Url = webhook,
-        		Method = "POST",
-        		Headers = {["Content-Type"] = "application/json"},
-        		Body = HttpService:JSONEncode({
-            			content = "<@"..userId.."> " .. msg
-        		})
-    		})
-	end
 	
 	send(":ballot_box_with_check: Duel'de farm başlatılmıştır, kolay gelsin!")
 	
 	while task.wait(60) do
-    		local count = #Players:GetPlayers()
-    		if count >= 2 then
-        		send(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda "..count.." oyuncu kaldı!")
+    	local count = #Players:GetPlayers()
+    	if count >= 2 then
+        	send(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda "..count.." oyuncu kaldı!")
 		else
 			send(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda "..count.." oyuncu kaldı!")
-    		end
+    	end
 	end
 
 
