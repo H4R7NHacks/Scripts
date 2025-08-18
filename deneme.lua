@@ -70,19 +70,46 @@ local function sendforkillcrash(msg)
     	})
 end
 
+local function sendduelamount(msg)
+    	request({
+        	Url = duelwebhook,
+        	Method = "POST",
+        	Headers = {["Content-Type"] = "application/json"},
+        	Body = HttpService:JSONEncode({
+            	content = msg
+        	})
+    	})
+end
+
+local function sendkillamount(msg)
+    	request({
+        	Url = killwebhook,
+        	Method = "POST",
+        	Headers = {["Content-Type"] = "application/json"},
+        	Body = HttpService:JSONEncode({
+            	content = msg
+        	})
+    	})
+end
+
+
 if game.PlaceId == 13772394625 and game.Players.LocalPlayer.UserId == 8493256621 then
 
 	
 	sendwelcomeforkill(":ballot_box_with_check: Private Server'da kill farmı başlatılmıştır, kolay gelsin!")
 	wait(0.1)
-	sendwelcomeforkill("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
+	sendkillamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
 	
 	while task.wait(60) do
     	local count = #Players:GetPlayers()
     	if count >= 3 then
-        	sendforkillnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu kaldı ve mevcut Kill sayınız : "..game.Players.LocalPlayer.leaderstats.Elims.Value.." !")
+        	sendforkillnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu bulunuyor!")
+			wait(0.1)
+			sendkillamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
 		else
-			sendforkillcrash(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda "..count.." oyuncu kaldı ve mevcut Kill sayınız : "..game.Players.LocalPlayer.leaderstats.Elims.Value.." !")
+			sendforkillcrash(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu kaldı!")
+			wait(0.1)
+			sendkillamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
     	end
 	end
 
@@ -95,9 +122,13 @@ elseif game.PlaceId == 15144787112 and game.Players.LocalPlayer.UserId == 849325
 	while task.wait(60) do
     	local count = #Players:GetPlayers()
     	if count >= 2 then
-        	sendforduelnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda "..count.." oyuncu kaldı!")
+        	sendforduelnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu bulunuyor!")
+			wait(0.1)
+			sendduelamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
 		else
-			sendforduelcrash(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda "..count.." oyuncu kaldı!")
+			sendforduelcrash(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu kaldı!")
+			wait(0.1)
+			sendduelamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
     	end
 	end
 
