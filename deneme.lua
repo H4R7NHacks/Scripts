@@ -73,7 +73,9 @@ end
 if game.PlaceId == 13772394625 and game.Players.LocalPlayer.UserId == 8493256621 then
 
 	
-	sendwelcomeforkill(":ballot_box_with_check: Private Server'da kill farmı başlatılmıştır, mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**, kolay gelsin!")
+	sendwelcomeforkill(":ballot_box_with_check: Private Server'da kill farmı başlatılmıştır, kolay gelsin!")
+	wait(0.1)
+	sendwelcomeforkill("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
 	
 	while task.wait(60) do
     	local count = #Players:GetPlayers()
