@@ -100,14 +100,14 @@ if game.PlaceId == 13772394625 and game.Players.LocalPlayer.UserId == 8493256621
 	wait(0.1)
 	sendkillamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
 	
-	while task.wait(60) do
+	while task.wait(59.9) do
     	local count = #Players:GetPlayers()
     	if count >= 3 then
-        	sendforkillnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu bulunuyor!")
+        	sendforkillnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu bulunuyor! Eğer 60 saniye sonra mesaj gelmediyse ana hesabınızın oyunda olmadığı anlamına gelir.")
 			wait(0.1)
 			sendkillamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
 		else
-			sendforkillcrash(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu kaldı!")
+			sendforkillcrash(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu kaldı! Eğer 60 saniye sonra mesaj gelmediyse ana hesabınızın oyunda olmadığı anlamına gelir.")
 			wait(0.1)
 			sendkillamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
     	end
@@ -118,15 +118,17 @@ elseif game.PlaceId == 15144787112 and game.Players.LocalPlayer.UserId == 849325
 
 	
 	sendwelcomeforduel(":ballot_box_with_check: Duel'de farm başlatılmıştır, kolay gelsin!")
+	wait(0.1)
+	sendduelamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
 	
-	while task.wait(60) do
+	while task.wait(59.9) do
     	local count = #Players:GetPlayers()
     	if count >= 2 then
-        	sendforduelnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu bulunuyor!")
+        	sendforduelnp(":white_check_mark: Şimdilik sorun yok gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu bulunuyor! Eğer 60 saniye sonra mesaj gelmediyse ana hesabınızın oyunda olmadığı anlamına gelir.")
 			wait(0.1)
 			sendduelamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
 		else
-			sendforduelcrash(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu kaldı!")
+			sendforduelcrash(":x: Görünüşe göre bazı hesapların **Crash** yemiş gibi görünüyor. Toplam sunucuda **"..count.."** oyuncu kaldı! Eğer 60 saniye sonra mesaj gelmediyse ana hesabınızın oyunda olmadığı anlamına gelir.")
 			wait(0.1)
 			sendduelamount("Mevcut Kill sayınız : **"..game.Players.LocalPlayer.leaderstats.Elims.Value.."**")
     	end
