@@ -15,18 +15,6 @@ local function send(msg)
     	})
 end
 
-
-local function send(msg1)
-    	request({
-        	Url = killwebhook,
-        	Method = "POST",
-        	Headers = {["Content-Type"] = "application/json"},
-        	Body = HttpService:JSONEncode({
-            	content = "<@"..userId.."> " .. msg1
-        	})
-    	})
-end
-
 if game.PlaceId == 13772394625 and game.Players.LocalPlayer.UserId == 8493256621 then
 
 	
