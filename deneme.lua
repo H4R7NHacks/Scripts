@@ -6,7 +6,19 @@ local killwebhook = "https://discord.com/api/webhooks/1406797634605285426/9igbro
 
 local function send(msg)
     	request({
-        	Url = webhook,
+        	Url = duelwebhook,
+        	Method = "POST",
+        	Headers = {["Content-Type"] = "application/json"},
+        	Body = HttpService:JSONEncode({
+            	content = "<@"..userId.."> " .. msg
+        	})
+    	})
+end
+
+
+local function send(msg)
+    	request({
+        	Url = killwebhook,
         	Method = "POST",
         	Headers = {["Content-Type"] = "application/json"},
         	Body = HttpService:JSONEncode({
