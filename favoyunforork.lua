@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/H4R7NHacks/Scripts/refs/heads/main/bbwebhook.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/H4R7NHacks/Scripts/refs/heads/main/bbwebhookforork.lua"))()
 
 
 if game.PlaceId == 15144787112 then
