@@ -302,7 +302,7 @@ elseif game.PlaceId == 15264892126 and game.Players.LocalPlayer.UserId == 414521
    			if not LocalPlayer:IsFriendsWith(player.UserId) then
 				sendplayernameforwin(":warning: Sunucuda **"..player.Name.."** kullanıcı adına sahip yabancı oyuncu tespit edildiği için güvenlik amaçlı tüm hesaplar oyundan atılmıştır!")
 				wait(0.1)
-       				game.Players.LocalPlayer:Kick("Yabancı oyuncu tespit edildi!")
+       				game:Shutdown()
     			end
 		end)
 	end)
@@ -340,7 +340,7 @@ elseif game.PlaceId == 15264892126 then
 
 		Players.PlayerAdded:Connect(function(player)
     			if not LocalPlayer:IsFriendsWith(player.UserId) then
-        			game.Players.LocalPlayer:Kick("Yabancı oyuncu tespit edildi!")
+        			game:Shutdown()
    			end
 		end)
 	end)
