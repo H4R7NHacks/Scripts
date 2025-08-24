@@ -162,7 +162,7 @@ if game.PlaceId == 15144787112 and game.Players.LocalPlayer.UserId == 3076333652
 			for i,v in pairs (ball) do
 				if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("BasePart") then
                 			if game.Workspace.Alive:FindFirstChild(game.Players.LocalPlayer.Name) then
-						game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game:GetService("Players"):WaitForChild("1sametfarm1").Character)
+						game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())].Character)
             				end
 				end
 			end
@@ -266,7 +266,7 @@ elseif game.PlaceId == 15264892126 and game.Players.LocalPlayer.UserId == 307633
 			for i,v in pairs (ball) do
 				if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("BasePart") then
                				if game.Workspace.Alive:FindFirstChild(game.Players.LocalPlayer.Name) then
-						game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game:GetService("Players"):WaitForChild("1sametfarm1").Character)
+						game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())].Character)
 						wait(10)
             				end
 				end
