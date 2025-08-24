@@ -273,7 +273,7 @@ elseif game.PlaceId == 15264892126 and game.Players.LocalPlayer.UserId == 307633
 						wait(0.1)
 						for i, y in pairs (ballspawn) do
 							if y.Name == "BALLSPAWN" then
-								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = y.CFrame + Vector3.new(20, 2, 20)
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = y.CFrame + Vector3.new(25, 2, 25)
 								wait(10)
 							end
 						end
