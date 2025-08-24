@@ -266,13 +266,9 @@ elseif game.PlaceId == 15264892126 and game.Players.LocalPlayer.UserId == 307633
 			for i,v in pairs (ball) do
 				if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("BasePart") then
                				if game.Workspace.Alive:FindFirstChild(game.Players.LocalPlayer.Name) then
-						local konum = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-						wait(0.1)
 						game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("DualityShootActivation"):FireServer("Light", game.Players:GetPlayers()[math.random(1, #game.Players:GetPlayers())].Character)
-						wait(0.1)
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = konum
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = konum
-						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = konum
+						wait(0.2)
+						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(25, 2, 25)
 						wait(10)
             				end
 				end
