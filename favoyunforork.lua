@@ -262,6 +262,7 @@ elseif game.PlaceId == 15264892126 and game.Players.LocalPlayer.UserId == 307633
 	task.spawn(function()
 		while wait() do
 			local ball = game.Workspace.Balls:GetDescendants()
+			local ballspawn = game.Workspace.Map:GetDescendants()
 	
 			for i,v in pairs (ball) do
 				if v:IsA("Part") or v:IsA("MeshPart") or v:IsA("BasePart") then
@@ -269,6 +270,13 @@ elseif game.PlaceId == 15264892126 and game.Players.LocalPlayer.UserId == 307633
 						vim:SendKeyEvent(true, Enum.KeyCode.Q, false, game)
 						wait(0.05)
 						vim:SendKeyEvent(false, Enum.KeyCode.Q, false, game)
+						wait(0.1)
+						for i, y in pairs (ballspawn) do
+							if y.Name == "BALLSPAWN" then
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = y.CFrame + Vector3.new(20, 2, 20)
+								wait(10)
+							end
+						end
             				end
 				end
 			end
