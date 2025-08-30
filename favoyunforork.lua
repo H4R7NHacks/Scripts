@@ -5,6 +5,7 @@ local userId = "1300452724953055335"
 local duelwebhook = "https://discord.com/api/webhooks/1410665903359787169/tWQQ3WfSaZ2YQsWsDM3yUrt1FoLw-0AsoXuzw1Hd6uOsHCX4ugkw1LIWkEk28iBD_LyF"
 local killwebhook = "https://discord.com/api/webhooks/1410666517154234449/ZgxP-oKRM5y1Jbqhbt20c8b-KmLFtNAuKhro6r10Zz9dcbWGE67JGQf-T-TkpTbQEzg9"
 local winwebhook = "https://discord.com/api/webhooks/1410666664579698738/_EqmdjpCPhOc-4iwqkKdMYtFevs2tb5RVVMxChJDdmkB2xtnmyKOm8G8xpOP3R74T_1i"
+local spinwebhook = "https://discord.com/api/webhooks/1411156540400074844/f6oCQsdqZgLMjlQ6OsRWzD3KDN-V77rXABhPw3biFC6HeyGQ4JuF07ZM2MU1MkWxFtQe"
 
 local function sendwelcomeforduel(msg)
     	request({
@@ -149,6 +150,17 @@ local function sendplayernameforwin(msg)
     	})
 end
 
+local function sendspinamount(msg)
+    	request({
+        	Url = spinwebhook,
+        	Method = "POST",
+        	Headers = {["Content-Type"] = "application/json"},
+        	Body = HttpService:JSONEncode({
+            	content = msg
+        	})
+    	})
+end
+
 
 if game.PlaceId == 15144787112 and game.Players.LocalPlayer.UserId == 3076333652 then
 
@@ -267,6 +279,17 @@ elseif game.PlaceId == 15264892126 and game.Players.LocalPlayer.UserId == 307633
 	end)
 
 	task.spawn(function()
+		while true do
+			game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_net@0.1.0"):WaitForChild("net"):WaitForChild("RE/FriendsList/CollectReward"):FireServer(1)
+			game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_net@0.1.0"):WaitForChild("net"):WaitForChild("RE/FriendsList/CollectReward"):FireServer(2)
+			game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_net@0.1.0"):WaitForChild("net"):WaitForChild("RE/FriendsList/CollectReward"):FireServer(3)
+			wait(1)
+			sendspinamount("Mevcut Spin sayınız : **"..game:GetService("Players").LocalPlayer.PlayerGui.BattlepassSpinGacha.Main.Background.Spin.Spin.Label.Text.."**")
+			wait(1799)
+		end
+	end)
+
+	task.spawn(function()
 		sendwelcomeforwin(":ballot_box_with_check: Win farmı başlatılmıştır, kolay gelsin!")
 		wait(0.1)
 		sendwinamount("Mevcut Win sayınız : **"..game.Players.LocalPlayer.leaderstats.Wins.Value.."**")
@@ -303,8 +326,7 @@ elseif game.PlaceId == 15264892126 then
 		game.Players.LocalPlayer:GetPropertyChangedSignal("Team"):Connect(function()
 			if game.Players.LocalPlayer.Team and game.Players.LocalPlayer.Team.Name == "Playing" then
 				if game.Players.LocalPlayer.Name == "1sametfarm1" then
-					wait(0.5)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.Rising_An4el.Character.HumanoidRootPart.CFrame
+
 				else
 					game.Players.LocalPlayer.Character.Humanoid.Health = 0
 				end
