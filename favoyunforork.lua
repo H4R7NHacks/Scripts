@@ -284,8 +284,8 @@ elseif game.PlaceId == 15264892126 and game.Players.LocalPlayer.UserId == 307633
 			game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_net@0.1.0"):WaitForChild("net"):WaitForChild("RE/FriendsList/CollectReward"):FireServer(2)
 			game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("_Index"):WaitForChild("sleitnick_net@0.1.0"):WaitForChild("net"):WaitForChild("RE/FriendsList/CollectReward"):FireServer(3)
 			wait(1)
-			sendspinamount("Mevcut Spin sayınız : **"..game:GetService("Players").LocalPlayer.PlayerGui.BattlepassSpinGacha.Main.Background.Spin.Spin.Label.Text.."**")
-			wait(1799)
+			sendspinamount("**"..game.Players.LocalPlayer.Name.."** kullanıcı adındaki hesapta biriken Spin sayısı : **"..game:GetService("Players").LocalPlayer.PlayerGui.BattlepassSpinGacha.Main.Background.Spin.Spin.Label.Text.."**")
+			wait(17)
 		end
 	end)
 
