@@ -303,6 +303,7 @@ elseif game.PlaceId == 15264892126 then
 		game.Players.LocalPlayer:GetPropertyChangedSignal("Team"):Connect(function()
 			if game.Players.LocalPlayer.Team and game.Players.LocalPlayer.Team.Name == "Playing" then
 				if game.Players.LocalPlayer.Name == "1sametfarm1" then
+					wait(0.5)
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.Rising_An4el.Character.HumanoidRootPart.CFrame
 				else
 					game.Players.LocalPlayer.Character.Humanoid.Health = 0
