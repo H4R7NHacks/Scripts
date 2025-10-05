@@ -1,4 +1,5 @@
-if game.CoreGui.RobloxGui:FindFirstChild("byH4R7N") then return end
+if game.CoreGui.RobloxGui:FindFirstChild("byH4R7N") then
+else
 
 -- Gui to Lua
 -- Version: 3.2
@@ -155,3 +156,4 @@ local function BRAPKX_fake_script() -- Menu.LocalScript
 	end)
 end
 coroutine.wrap(BRAPKX_fake_script)()
+end
