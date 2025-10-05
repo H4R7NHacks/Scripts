@@ -17,7 +17,7 @@ local UICorner = Instance.new("UICorner")
 --Properties:
 
 byH4R7N.Name = "byH4R7N"
-byH4R7N.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+byH4R7N.Parent = game.CoreGui.RobloxGui
 byH4R7N.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Menu.Name = "Menu"
@@ -60,6 +60,7 @@ crowns.TextWrapped = true
 
 TextLabel.Parent = Menu
 TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1
 TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.00531914877, 0, 0, 0)
