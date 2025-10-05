@@ -1,3 +1,5 @@
+if game.CoreGui.RobloxGui:FindFirstChild("byH4R7N") then return end
+
 -- Gui to Lua
 -- Version: 3.2
 
